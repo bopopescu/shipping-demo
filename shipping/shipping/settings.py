@@ -44,8 +44,8 @@ INSTALLED_APPS = [
     'languages',
     'djmoney',
     # Applications
-    'providers',
-    'areas',
+    'apps.providers',
+    'apps.areas',
 ]
 
 MIDDLEWARE_CLASSES = [

@@ -1,5 +1,5 @@
 from django.contrib.gis.db import models
-from providers.models import Provider
+from apps.providers.models import Provider
 from djmoney.models.fields import MoneyField
 
 
