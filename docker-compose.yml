@@ -3,10 +3,9 @@ version: "3"
 services:
   app:
     build: ./shipping
-    command: python manage.py runserver
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./shipping:/src
-    # network_mode: "host"
     ports:
       - 8000:8000
     environment:
@@ -17,7 +16,3 @@ services:
 
   db:
     image: mdillon/postgis
-    # environment:
-    #   POSTGRES_DB: djangodb
-    #   POSTGRES_USER: django
-    #   POSTGRES_PASSWORD: example_password
