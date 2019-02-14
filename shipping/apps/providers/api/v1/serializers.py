@@ -26,10 +26,10 @@ class ProviderSerializer(serializers.ModelSerializer):
         )
 
     def create(self, validated_data):
-        email = validated_data.pop['email']
+        user = validated_data.pop('user')
         user = User.objects.create_user(
             username=str(uuid.uuid4()),
-            email=email,
+            **user,
         )
         return Provider(**validated_data, user=user)
 
