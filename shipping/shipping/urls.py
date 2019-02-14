@@ -15,7 +15,29 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from rest_framework import routers
+
+from apps.areas.api.v1 import views as api_v1_areas
+from apps.providers.api.v1 import views as api_v1_providers
+
+
+router = routers.DefaultRouter()
+
+router.register(
+    'api/v1/areas',
+    api_v1_areas.ServiceAreaViewSet,
+    'area',
+)
+
+router.register(
+    'api/v1/providers',
+    api_v1_providers.ProviderViewSet,
+    'provider',
+)
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 ]
+
+urlpatterns += router.urls

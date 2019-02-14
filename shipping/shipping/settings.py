@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'phonenumber_field',
     'languages',
     'djmoney',
+    'rest_framework',
     # Applications
     'apps.providers',
     'apps.areas',

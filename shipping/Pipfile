@@ -13,6 +13,7 @@ django-language-field = "*"
 django-money = "*"
 psycopg2 = "*"
 psycopg2-binary = "*"
+djangorestframework = "*"
 
 [requires]
 python_version = "3.6"
