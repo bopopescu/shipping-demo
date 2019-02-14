@@ -39,6 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',
+    # Third party apps
+    'phonenumber_field',
+    'languages',
+    'djmoney',
+    # Applications
+    'providers',
+    'areas',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -76,18 +83,16 @@ WSGI_APPLICATION = 'shipping.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DEVELOPMENT_DB = {
-    'ENGINE': 'django.contrib.gis.db.backends.spatialite',
-    'NAME': os.path.join(BASE_DIR, 'db.spatialite'),
-}
-
-if os.getenv('DATABASE'):
-    DATABASE = json.loads(os.getenv('DATABASE'))
-else:
-    DATABASE = DEVELOPMENT_DB
 
 DATABASES = {
-    'default': DATABASE
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        # 'PORT': '',
+    }
 }
 
 

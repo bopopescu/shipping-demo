@@ -1,0 +1,23 @@
+# This compose file is for development only
+version: "3"
+services:
+  app:
+    build: ./shipping
+    command: python manage.py runserver
+    volumes:
+      - ./shipping:/src
+    # network_mode: "host"
+    ports:
+      - 8000:8000
+    environment:
+      DB_NAME: postgres
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_HOST: db
+
+  db:
+    image: mdillon/postgis
+    # environment:
+    #   POSTGRES_DB: djangodb
+    #   POSTGRES_USER: django
+    #   POSTGRES_PASSWORD: example_password
