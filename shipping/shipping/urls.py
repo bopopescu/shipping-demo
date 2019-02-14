@@ -38,6 +38,7 @@ router.register(
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'api/v1/areas/filtered/', api_v1_areas.FilteredAreaList.as_view())
 ]
 
 urlpatterns += router.urls

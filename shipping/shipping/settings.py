@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'languages',
     'djmoney',
     'rest_framework',
+    'rest_framework_gis',
     # Applications
     'apps.providers',
     'apps.areas',

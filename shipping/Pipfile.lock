@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "9940b40177af9b4dab941742e9d684d6921b4a2532a09ea37d4302880828cfed"
+            "sha256": "9f2610c5020c16d4144dfe1e34826c28e563a4d7e880433d2248641e26aef7eb"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -30,6 +30,14 @@
             ],
             "index": "pypi",
             "version": "==2.1.7"
+        },
+        "django-filter": {
+            "hashes": [
+                "sha256:3dafb7d2810790498895c22a1f31b2375795910680ac9c1432821cbedb1e176d",
+                "sha256:a3014de317bef0cd43075a0f08dfa1d319a7ccc5733c3901fb860da70b0dda68"
+            ],
+            "index": "pypi",
+            "version": "==2.1.0"
         },
         "django-language-field": {
             "hashes": [
@@ -60,6 +68,14 @@
             ],
             "index": "pypi",
             "version": "==3.9.1"
+        },
+        "djangorestframework-gis": {
+            "hashes": [
+                "sha256:35527c51e083ccc93f6e6d90a6515c132bbeb2c5648b166ac5b1a48c4ea8e2a4",
+                "sha256:e645c6c8aedee53ac0a4851abcdf8121fff66813eebae1b040b1ccb941cb248b"
+            ],
+            "index": "pypi",
+            "version": "==0.14"
         },
         "phonenumbers": {
             "hashes": [
